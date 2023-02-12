@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import deleteIcon from '../gambar/activity-item-delete-button.svg';
-import Delete from "./Delete";
+import Delete from "./DeleteModal";
 import {useNavigate} from 'react-router-dom';
 import moment from 'moment';
 
 const ActivityCard =  ({data, deleteData, ...rest}) => {
+    console.log(data)
     const dateTime = new Date(data.created_at)
 
     const [show, setShow] = useState(false)
@@ -15,7 +16,7 @@ const ActivityCard =  ({data, deleteData, ...rest}) => {
     const navigate = useNavigate()
 
     const viewActivity = (id) =>{
-        navigate("/activity/${id}")
+        navigate(`/activity/${id}`)
     }
 
     return (
@@ -33,4 +34,4 @@ const ActivityCard =  ({data, deleteData, ...rest}) => {
     )
 }
 
-export default ActivityCard
+export default ActivityCard;

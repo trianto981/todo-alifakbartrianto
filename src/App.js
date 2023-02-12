@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header';
-import Dashboard from './webFront/Dashboard';
-import Detail from './webFront/Detail';
+import Dashboard from './pages/Dashboard';
+import Detail from './pages/Detail';
 
 function App() {
   return (
